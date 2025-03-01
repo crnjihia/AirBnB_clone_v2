@@ -1,38 +1,44 @@
 #!/usr/bin/env bash
-# Sets up a web server for deployment of web_static.
+# Script to set up web servers for the deployment of web_static
 
-apt-get update
-apt-get install -y nginx
+# Update the package list to get the latest version of packages
+sudo apt-get update
 
-mkdir -p /data/web_static/releases/test/
-mkdir -p /data/web_static/shared/
-echo "Holberton School" > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/releases/test/ /data/web_static/current
+# Install Nginx web server
+sudo apt-get -y install nginx
 
-chown -R ubuntu /data/
-chgrp -R ubuntu /data/
+# Allow HTTP traffic through the firewall for Nginx
+sudo ufw allow 'Nginx HTTP'
 
-printf %s "server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    add_header X-Served-By $HOSTNAME;
-    root   /var/www/html;
-    index  index.html index.htm;
+# Create the main data directory
+sudo mkdir -p /data/
 
-    location /hbnb_static {
-	alias /data/web_static/current;
-	index index.html index.htm;
-    }
+# Create subdirectories for web_static storage
+sudo mkdir -p /data/web_static/
+sudo mkdir -p /data/web_static/releases/
+sudo mkdir -p /data/web_static/shared/
+sudo mkdir -p /data/web_static/releases/test/
 
-    location /redirect_me {
-	return 301 http://cuberule.com/;
-    }
+# Create a test HTML file in the test release directory
+sudo touch /data/web_static/releases/test/index.html
 
-    error_page 404 /404.html;
-    location /404 {
-      root /var/www/html;
-      internal;
-    }
-}" > /etc/nginx/sites-available/default
+# Write a simple HTML page into the test file
+echo "<html>
+  <head>
+  </head>
+  <body>
+    ALX
+  </body>
+</html>" | sudo tee /data/web_static/releases/test/index.html
 
-service nginx restart
+# Create a symbolic link to the test release as the current release
+sudo ln -s -f /data/web_static/releases/test/ /data/web_static/current
+
+# Change ownership of the /data/ directory to the ubuntu user
+sudo chown -R ubuntu:ubuntu /data/
+
+# Update Nginx configuration to serve content from the web_static directory
+sudo sed -i '/listen 80 default_server/a location /hbnb_static { alias /data/web_static/current/;}' /etc/nginx/sites-enabled/default
+
+# Restart Nginx to apply the new configuration
+sudo service nginx restart

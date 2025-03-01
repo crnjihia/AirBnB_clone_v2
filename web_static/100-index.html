@@ -1,182 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>AirBnB clone</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="styles/4-common.css">
-	<link rel="stylesheet" href="styles/6-filters.css">
-	<link rel="stylesheet" href="styles/3-header.css">
-	<link rel="stylesheet" href="styles/3-footer.css">
-	<link rel="stylesheet" href="styles/100-places.css">
-	<link rel="icon" href="images/icon.png">
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnB clone</title> <!-- Title of the webpage -->
+    <link rel="icon" href="images/icon.png"/> <!-- Favicon for the site -->
+    <!-- Linking CSS stylesheets for different sections of the site -->
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/6-filters.css"/>
+    <link rel="stylesheet" href="styles/8-places.css"/>
 </head>
 <body>
-	<header></header>
-	<div class="container">
-		<section class="filters">
-			<div class="locations">
-				<h3>States</h3>
-				<h4>ie. Addis Ababa, Dire Dawa...</h4>
-				<div class="popover">
-					<h2>Addis Ababa</h2>
-					<ul>
-						<li>Bole</li>
-						<li>piassa</li>
-						<li>Mexico</li>
-					</ul>
-					<h2>Dire Dawa</h2>
-					<ul>
-						<li>Konel</li>
-						<li>Ashewa</li>
-						<li>Kezira</li>
-					</ul>
-				</div>
-			</div><div class="amenities">
-				<h3>Amenities</h3>
-				<h4>ie. Internet,Kitchen ...</h4>
-				<div class="popover">
-					<ul>
-						<li>Internet</li>
-						<li>Tv</li>
-						<li>Kitchen</li>
-						<li>Iron</li>
-						<li>Swimming pool</li>
-					</ul>
-				</div>
-			</div>
-			<button>Search</button>	
-		</section>
-		<section class="places">
-		<h1>Places</h1>
-		<div class="listing">
-			<article>
-			<div class="list-motel">
-				<h2> Villa</h2>
-				<div class="price_by_night"><p>$50</p></div>
-			</div>
-			<div class="information">
-				<div class="max_guest"><p>5 Guests</p></div>
-				<div class="number_rooms"><p>4 Room</p></div>
-				<div class="number_bathrooms"><p>3 Bathrooms</p></div>
-			</div>
-				<div class="user"><p><b>Owner</b>: Haile G/selasse<p></div>
-				<div class="description"><p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
-			</div>
-			<div class="amenities">
-				<h2>Amenities</h2>
-				<ul>
-					<li class="pat">Pats frandly</li>
-					<li class="tv">TV</li>
-					<li class="wifi">Wifi</li>
-				</ul>					
-			</div>
-			<div class="reviews">
-				<h2>2 Reviews</h2>
-				<ul>
-					<li><h3>From Selam Daniel the 27th January 2021</h3></li>
-					<p>Cute is absolutely the correct adjective for this joy of a stay. Five stars!!</p>
-					<li><h3>From chala Mohammed the 22nd January 2020</h3></li>
-					<p> The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown</p>
-				</ul>
-
-			</div>
-	</article>
-	<article>
-		<div class="list-motel">
-			<h2> Apartment</h2>
-			<div class="price_by_night"><p>$80</p></div>
-		</div>
-		<div class="information">
-			<div class="max_guest"><p>3 Guests</p></div>
-			<div class="number_rooms"><p>2 Room</p></div>
-			<div class="number_bathrooms"><p>2 Bathrooms</p></div>
-		</div>
-			<div class="user"><p><b>Owner</b>: Kenenisa Bekele</p></div>
-			<div class="description"><p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
-				</div>
-				<div class="amenities">
-				<h2>Amenities</h2>
-				<ul>
-					<li class="pat">Pats frandly</li>
-					<li class="tv">TV</li>
-					<li class="wifi">Wifi</li>
-				</ul>					
-			</div>
-			<div class="reviews">
-				<h2>1 Reviews</h2>
-				<ul>
-					<li><h3>From Beti Tesfaye the 21th November 2022</h3></li>
-					<p> They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait. So this was a big plus. The sevice was exceptional as well. Would definitely send a friend there.</p>
-				</ul>					
-			</div>
-	</article>
-	<article>
-		<div class="list-motel">
-			<h2>Tiny Home</h2>
-			<div class="price_by_night"><p>$35</p></div>
-		</div>
-		<div class="information">
-			<div class="max_guest"><p>1 Guests</p></div>
-			<div class="number_rooms"><p>1 Room</p></div>
-			<div class="number_bathrooms"> <p>1 Bathrooms</p></div>
-		</div>	
-			<div class="user"><p><b>Owner</b>: Abebe Getahun</p></div>
-			<div class="description">
-				<p>The living room, then the toilet, then the bedroom.
-				Guests can dine on the perched terrace.</p>
-			</div>
-			<div class="amenities">
-				<h2>Amenities</h2>
-				<ul>
-					<li class="pat">Pats not allowed</li>
-					<li class="tv">TV</li>
-					<li class="wifi">Wifi</li>
-				</ul>					
-			</div>
-			<div class="reviews">
-				<h2>2 Reviews</h2>
-				<ul>
-					<li><h3>From Teka Wendemu the 17th January 2020</h3></li>
-					<p>The staff at this property are all great! They all go above and beyond to make your stay comfortable. Please (HN) give your staff awards!</p>
-				</ul>
-			</div>			
-	</article>
-	<article>
-		<div class="list-motel">
-			<h2>VIP Sweet</h2>
-			<div class="price_by_night"><p>$90</p></div>
-		</div>
-		<div class="information">
-			<div class="max_guest"><p>6 Guests</p></div>
-			<div class="number_rooms"><p>5 Room</p></div>
-			<div class="number_bathrooms"><p>5 Bathrooms</p></div>
-		</div>
-			<div class="user"><p><b>Owner</b>: Belaneh Kinde</p></div>
-			<div class="description"><p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
-		</div>
-		<div class="amenities">
-				<h2>Amenities</h2>
-				<ul>
-					<li class="pat">Pats frandly</li>
-					<li class="tv">TV</li>
-					<li class="wifi">Wifi</li>
-					<li class="air">Air conditioner</li> 
-				</ul>					
-			</div>
-			<div class="reviews">
-				<h2>1 Reviews</h2>
-				<ul>
-					<li><h3>From Joel Shimeles the 21th November 2022</h3></li>
-					<p> The best hotel I’ve ever been privileged enough to stay at. Gorgeous building, and it only gets more breathtaking when you walk in. High quality rooms (there was even a tv by the shower), and high quality service. Also, they are one of few hotels that allow people under 21 to book a reservation.</p>
-				</ul>					
-			</div>
-		</article>
-		</div>
-		</section>
-	</div>
-	<footer>
-		Best School
-	</footer>
+    <header>
+        <div class="logo"></div> <!-- Placeholder for the logo -->
+    </header>
+    <div class="container">
+        <section class="filters">
+            <div class="location">
+                <h3>States</h3> <!-- Heading for the states filter -->
+                <h4>California, Arizona...</h4> <!-- Subtitle for location options -->
+                <ul class="popover"> <!-- List of states with cities -->
+                    <li>
+                        <h2>Arizona</h2> <!-- State name -->
+                        <ul>
+                            <li>Phoenix</li> <!-- City in Arizona -->
+                            <li>Tucson</li> <!-- City in Arizona -->
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>California</h2> <!-- State name -->
+                        <ul>
+                            <li>San Francisco</li> <!-- City in California -->
+                            <li>Los Altos</li> <!-- City in California -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3> <!-- Heading for the amenities filter -->
+                <h4>Internet, Kitchen...</h4> <!-- Subtitle for amenities options -->
+                <ul class="popover"> <!-- List of available amenities -->
+                    <li>Internet</li>
+                    <li>TV</li>
+                    <li>Kitchen</li>
+                    <li>Iron</li>
+                </ul>
+            </div>
+            <button>Search</button> <!-- Button to initiate search based on filters -->
+        </section>
+        <section class="places">
+            <h1>Places</h1> <!-- Main heading for the places section -->
+            <!-- Article for individual property listing -->
+            <article>
+                <h2> My Home</h2> <!-- Property name -->
+                <div class="price_by_night">$80</div> <!-- Price per night -->
+                <div class="information"> <!-- Information about the property -->
+                    <div class="max_guest">2 Guest</div> <!-- Maximum number of guests -->
+                    <div class="number_rooms">3 Rooms</div> <!-- Number of bedrooms -->
+                    <div class="number_bathrooms">2 Bathrooms</div> <!-- Number of bathrooms -->
+                </div>
+                <div class="user">
+                    <p><span>Owner:</span> William Wallace</p> <!-- Owner of the property -->
+                </div>
+                <div class="description"> <!-- Description of the property -->
+                    2 guests · Studio · 1 bed · 1 private bath
+                    Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.
+                    Great location
+                    90% of recent guests gave the location a 5-star rating.
+                    Great check-in experience
+                    95% of recent guests gave the check-in process a 5-star rating.
+                </div>
+            </article>
+            <!-- Additional property articles -->
+            <article>
+                <h2>Tiny House</h2> <!-- Property name -->
+                <div class="price_by_night">$65</div> <!-- Price per night -->
+                <div class="information">
+                    <div class="max_guest">2 Guest</div> <!-- Maximum number of guests -->
+                    <div class="number_rooms">3 Rooms</div> <!-- Number of bedrooms -->
+                    <div class="number_bathrooms">2 Bathrooms</div> <!-- Number of bathrooms -->
+                </div>
+                <div class="user">
+                    <p><span>Owner:</span> William Wallace</p> <!-- Owner of the property -->
+                </div>
+                <div class="description">
+                    This is a lovely 1 bedroom and 1 Bathroom 
+                    apartment that can accommodate 2 people. 
+                    It locates at the center of Shanghai and 
+                    next to subway line 1, stop to People Square, 
+                    2 stops to Bund, 3 stops to Jingan Temple.
+                </div>
+            </article>
+            <article>
+                <h2>A suite</h2> <!-- Property name -->
+                <div class="price_by_night">$190</div> <!-- Price per night -->
+                <div class="information">
+                    <div class="max_guest">2 Guest</div> <!-- Maximum number of guests -->
+                    <div class="number_rooms">3 Rooms</div> <!-- Number of bedrooms -->
+                    <div class="number_bathrooms">2 Bathrooms</div> <!-- Number of bathrooms -->
+                </div>
+                <div class="user">
+                    <p><span>Owner:</span> William Wallace</p> <!-- Owner of the property -->
+                </div>
+                <div class="description">
+                    This is a lovely 1 bedroom and 1 Bathroom 
+                        apartment that can accommodate 2 people. 
+                        It locates at the center of Shanghai and 
+                        next to subway line 1, stop to People Square, 
+                        2 stops to Bund, 3 stops to Jingan Temple.
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        Best School <!-- Footer content -->
+    </footer>
 </body>
 </html>
